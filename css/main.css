@@ -1,0 +1,119 @@
+/*Colores*/
+:root {
+  --darkBlue: hsl(233, 47%, 7%);
+  --cardBg: hsl(244, 38%, 16%);
+  --violetCover: hsl(277, 64%, 61%);
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--darkBlue);
+}
+
+.contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  margin: 50px 0;
+}
+
+.contenedor-card {
+  background-color: var(--cardBg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  width: 400px;
+}
+
+@media (min-width: 768px) {
+  .contenedor-card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    width: 700px;
+    height: auto;
+  }
+  .contenedor {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0;
+  }
+}
+
+.card-information {
+  padding: 30px;
+}
+
+.card-information p {
+  font-weight: 200;
+  font-size: 12px;
+}
+
+.card-information h1,
+.card-information p {
+  color: white;
+}
+
+.card-information span {
+  color: var(--violetCover);
+}
+
+.card-information .card-stats {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-information .card-stats-info h3 {
+  color: white;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.card-information .card-stats-info p {
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.card-img {
+  position: relative;
+}
+
+.card-img-cover {
+  position: absolute;
+  background-color: var(--violetCover);
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+/*# sourceMappingURL=main.css.map */
